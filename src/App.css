@@ -1,0 +1,25 @@
+#root{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.app-wrapper{
+  color: #312c51;
+  width:60%;
+  display: grid;
+  margin:0;
+  grid-template-areas: 
+  ' h h'
+  'n c';
+  grid-template-rows: 75px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 1vw;
+
+}
+.app-wrapper-content{
+    grid-area: c;
+    background-color: #cdd0cb;
+    color: #312c51;
+    padding: 10px;
+}

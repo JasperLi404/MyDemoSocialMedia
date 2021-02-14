@@ -1,0 +1,21 @@
+.textarea{
+    display: block;
+}
+div.button{
+    margin: 10px;
+    background-color:  #7c9473;
+    width: 25%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    
+}
+.button h4{
+    color: #cdd0cb;
+}
+.posts{
+    display: flex;
+    flex-direction: column-reverse;
+}

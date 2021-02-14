@@ -1,0 +1,49 @@
+.dialogs{
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+.dialogItems{
+    padding: 10px;
+}
+.messages{
+    padding: 10px;
+    display:grid;
+    grid-gap: 1vw;
+
+}
+.messages:nth-child(odd){
+    text-align: right;
+    position: relative;
+    right: 20px;
+}
+.messages:nth-child(last){
+    text-align: left;
+    position: relative;
+    left: 20px;
+}
+.active{
+   color: black;
+   font-style: initial;
+    font-size: large;
+}
+
+.cover{
+    margin-left: auto;
+}
+
+.textarea{
+    display: block;
+}
+div.button{
+    margin: 10px;
+    background-color:  #7c9473;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+.button h4{
+    color: #cdd0cb;
+}

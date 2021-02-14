@@ -1,0 +1,32 @@
+.like{
+  width:32px;
+  height:32px;
+
+}
+.item{
+  width: 40%;
+  display: grid;
+  grid-template-areas: 
+  'a mess '
+  'like like';
+  grid-template-rows: '50px 10fr';
+  grid-template-columns: '1fr 4fr';
+  grid-gap: 1vw;
+}
+  
+.ava{
+  width: 50px;
+  height: 70px;
+  grid-area: a;
+  
+}
+.item div:first-child{
+  grid-area: like;
+  padding-right: 30px;
+}
+.item div:nth-child(2){
+  grid-area: mess;
+  margin-left: auto;
+  width: 100%;
+
+}

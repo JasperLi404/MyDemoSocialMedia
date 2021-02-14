@@ -1,0 +1,70 @@
+img{
+    height: 65%;
+    width: 100px;
+}
+.cover{
+    width: 100%;
+    margin:10px;
+    display: grid;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    grid-template-areas: "imgCover name location";
+    grid-template-columns: '1fr 4fr 1fr';
+
+}
+.name_cover{
+    height: 100%;
+    display: flex;
+    grid-area: name;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+}
+.status{
+    color: #7c9473;
+    padding-left:20px;
+    font-style: italic;
+    width: 180px;
+
+}
+.img_cover{
+    grid-area: imgCover;
+}
+.userPhoto{
+    width: 100%;
+    height: 70%;
+}
+.button{
+    font-size: 1em; 
+    background-color:  #7c9473;
+    color: #cdd0cb;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 100px;
+}
+
+.location{
+    grid-area: location;
+    width: 110px;
+}
+.selectedPage{
+    color:#7c9473;
+    cursor:pointer;
+}
+
+.unSelectedPage{
+    cursor:pointer;
+}
+.name{
+    width: 55%;
+}
+.pageList{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

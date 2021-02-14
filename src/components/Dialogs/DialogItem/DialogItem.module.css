@@ -1,0 +1,13 @@
+a{
+    text-decoration: none;
+    color:#312c59;
+}
+a:active{
+  color:#312c59;
+}
+a.activeLink{
+  color:#7c9473;
+}
+.dialog{
+  padding: 5px;
+}

@@ -1,0 +1,26 @@
+.header{
+    grid-area: h;
+    background-color: #cdd0cb;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  .circle{
+    border: 4px solid #7c9473;
+    /* border-radius: 400px; */
+    width: 50px;
+    height: 50px;
+    
+  }
+  .sitebar{
+    display: flex;
+    width: 40%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+.login-block{
+  
+}
