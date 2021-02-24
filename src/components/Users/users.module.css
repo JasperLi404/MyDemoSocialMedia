@@ -51,20 +51,7 @@ img{
     grid-area: location;
     width: 110px;
 }
-.selectedPage{
-    color:#7c9473;
-    cursor:pointer;
-}
 
-.unSelectedPage{
-    cursor:pointer;
-}
 .name{
     width: 55%;
-}
-.pageList{
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
 }

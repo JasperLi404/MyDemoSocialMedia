@@ -1,15 +1,17 @@
 import classes from './MyPosts.module.css';
 import React from 'react';
 import Post from './Post/Post.jsx';
-const MyPosts = (props) => {
-  let newPostElement = React.createRef();
-  let onAddPost = () =>{
-    if(newPostElement.current.value != '')  props.addPost();
-  }
+import { reduxForm} from 'redux-form';
+import AddPostForm from './AddPostForm';
 
-  let onPostChange = () => {
-    let text = newPostElement.current.value;
-    props.updateNewPostText(text);
+
+const AddPostFormRedux = reduxForm({form:"profileAddPostForm"})(AddPostForm);
+
+const MyPosts = React.memo((props) => {
+
+  const addNewPost = dataForm => {
+    props.addPost(dataForm.newPostBody);
+
   }
 
   let posts = props.postData
@@ -19,22 +21,15 @@ const MyPosts = (props) => {
       <div>
       <h3>My Posts</h3>
     <div>
-        <div className={classes.textarea}>
-          <textarea onChange={onPostChange} 
-            value={props.newPostText}   
-            ref={newPostElement}></textarea>
-        </div>
-        <div>
-          <div onClick={onAddPost} className={classes.button} >
-            <h4>Add Post</h4>
-        </div>
-
-        </div>
+        <AddPostFormRedux onSubmit={addNewPost} />
     </div>
     <div className={classes.posts}>
        {posts}
      </div>
    </div>
     )
-}
+})
+
+
+
 export default MyPosts;

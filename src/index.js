@@ -1,24 +1,11 @@
-import store from './redux/redux-store.js';
 import reportWebVitals from './reportWebVitals';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App'; 
-import { Provider } from 'react-redux';
+import SamuraiJsApp from './App'; 
 
 
-
-    ReactDOM.render(
-      <React.StrictMode>
-        <Provider store={store}>
-          <App />
-        </Provider>
-          {/* <App state={store.getState()} dispatch={store.dispatch.bind(store)} /> */}
-
-        
-      </React.StrictMode>,
-      document.getElementById('root')
-    );
+    ReactDOM.render( <SamuraiJsApp /> , document.getElementById('root') ) ;
 
 
 

@@ -1,5 +1,4 @@
-let ADD_MESSAGE = 'ADD-MESSAGE',
-    UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
+const ADD_MESSAGE = 'ADD-MESSAGE';
 
 let initialStore = {
     dialogsData : [
@@ -26,8 +25,7 @@ let initialStore = {
         {   id:5,
             src: "https://images.pexels.com/photos/5712114/pexels-photo-5712114.jpeg",
             message:"Yesks!"}
-      ],
-    newMessageText: ""
+      ]
 };
 const dialogsReducer = (state = initialStore, action) => {
     switch (action.type) {
@@ -35,24 +33,18 @@ const dialogsReducer = (state = initialStore, action) => {
             let newMessage = {   
                 id:6, 
                 src: 'https://images.pexels.com/photos/6163100/pexels-photo-6163100.jpeg',
-                message: state.newMessageText 
+                message: action.newMessageBody 
             };
             return  {
                 ...state,
-                messagesData: [...state.messagesData,  newMessage],
-                newMessageText: ''
-            }
-        case UPDATE_NEW_MESSAGE_TEXT:
-            return {
-                ...state,
-                newMessageText : action.newMessage
+                messagesData: [...state.messagesData,  newMessage]
             }
         default:
             return state;
     }
 }
 
-export const addMessageActionCreator = () => ({type:ADD_MESSAGE});
-export const updateNewMessageActionCreator = (message) => ({type:UPDATE_NEW_MESSAGE_TEXT, newMessage: message});
+export const addMessageActionCreator = (newMessageBody) => ({type:ADD_MESSAGE,newMessageBody});
+
 
 export default dialogsReducer;

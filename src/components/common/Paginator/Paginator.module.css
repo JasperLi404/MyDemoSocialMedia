@@ -1,0 +1,14 @@
+.selectedPage{
+    color:#7c9473;
+    cursor:pointer;
+}
+
+.unSelectedPage{
+    cursor:pointer;
+}
+.pageList{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

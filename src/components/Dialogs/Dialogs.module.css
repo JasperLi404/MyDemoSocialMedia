@@ -36,6 +36,7 @@
 }
 div.button{
     margin: 10px;
+    width:120px;
     background-color:  #7c9473;
     height: 30px;
     display: flex;
