@@ -9,13 +9,12 @@ let Users = ({currentPage, onPageChanged, totalUsersCount, users,  pageSize, fol
         for(let i = 1; i <= pagesCount; i++){
             pages.push(i);
         }
-
-
-    return(
+        debugger
+       return(
         <div>
-            <Paginator currentPage={props.currentPage}
+            <Paginator currentPage={currentPage}
                         onPageChanged={onPageChanged} 
-                        totalUsersCount={totalUsersCount}
+                        totalItemsCount={totalUsersCount}
                         pageSize={pageSize} />
         
         { 

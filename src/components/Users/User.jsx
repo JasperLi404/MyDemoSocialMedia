@@ -3,7 +3,7 @@ import styles from './users.module.css';
 import chatbot from '../../assets/image/chatbot.png';
 import { NavLink } from 'react-router-dom';
 
-let User = ({user, follow, unfollow}) => {
+let User = ({user, follow, unfollow, ...props}) => {
     return(
         <div> 
             <div className={styles.cover} key={user.id}>
