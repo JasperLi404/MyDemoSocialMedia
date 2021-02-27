@@ -11,12 +11,10 @@ const MyPosts = React.memo((props) => {
 
   const addNewPost = dataForm => {
     props.addPost(dataForm.newPostBody);
-
   }
 
   let posts = props.postData
-  .map( poster => <Post message={poster.post} likes={poster.likes}/> );
-
+  .map( poster => <Post key={poster.id} message={poster.post} likes={poster.likes}/> );
     return(
       <div>
       <h3>My Posts</h3>

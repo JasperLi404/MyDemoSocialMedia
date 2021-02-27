@@ -7,7 +7,7 @@ const Sitebar = props => {
         {
             props.sitebar.map(inf => 
                 
-                    <img className={classes.friendImg} src={inf.src} alt={inf.name}/>
+                    <img key={inf.id} className={classes.friendImg} src={inf.src} alt={inf.name}/>
                 
                 )
         }</div>

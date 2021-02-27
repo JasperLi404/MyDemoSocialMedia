@@ -9,21 +9,23 @@ const LoginReduxForm =  reduxForm({ form:'login'})(LoginForm);
 
 const Login = (props) => {
  const onSubmit = formData => {
-    props.login(formData.email, formData.password, formData.rememberMe)
+     console.log(formData.captcha);
+    props.login(formData.email, formData.password, formData.rememberMe, formData.captcha)
 }
-
+    console.log(props.captchaURL);
     if(props.isAuth){
         return (<Redirect to="profile" />)
     }
     return(
         <div>
             <h1>Login</h1>
-            <LoginReduxForm onSubmit={onSubmit} />
+            <LoginReduxForm onSubmit={onSubmit} captchaURL={props.captchaURL} />
         </div>    
     );
 }
 const mapStateToProps = state => ({
-    isAuth: state.auth.isAuth
+    isAuth: state.auth.isAuth,
+    captchaURL: state.auth.captchaURL
 })
 
 export default connect( mapStateToProps,{ login })(Login);

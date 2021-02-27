@@ -27,7 +27,6 @@ class App extends Component {
       }
 
       return (
-      <BrowserRouter>
         <div className="app-wrapper">
           <HeaderContainer/>
           <NavBar />
@@ -41,7 +40,6 @@ class App extends Component {
             <Route path='/settings' render={() => <Settings />} />
           </div>
         </div>
-      </BrowserRouter>
     );
   }
 }
@@ -53,7 +51,7 @@ const mapStateToProps = state => ({
 let AppContainer =  connect(mapStateToProps, { initializeApp })(App);
 const  SamuraiJsApp = props => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Provider store={store}>
         <AppContainer />
       </Provider>
