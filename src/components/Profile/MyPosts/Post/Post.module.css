@@ -4,6 +4,8 @@
 
 }
 .item{
+  padding-top: 10px;
+
   width: 40%;
   display: grid;
   grid-template-areas: 
@@ -15,7 +17,8 @@
 }
   
 .ava{
-  width: 50px;
+
+  width: 60px;
   height: 70px;
   grid-area: a;
   

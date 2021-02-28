@@ -14,9 +14,11 @@ import News from './components/News/News.jsx';
 import Settings from './components/Settings/Settings.jsx';
 import UsersContainer from './components/Users/UsersContainer';
 import { initializeApp } from './redux/app-reducer';
+import DialogsContainer from './components/Dialogs/DialogsContainer.jsx';
+import ProfileContainer from './components/Profile/ProfileContainer.jsx';
 
-const DialogsContainer = React.lazy(()=> import('./components/Dialogs/DialogsContainer.jsx'))
-const ProfileContainer = React.lazy(()=> import('./components/Profile/ProfileContainer'))
+// const DialogsContainer = React.lazy(()=> import('./components/Dialogs/DialogsContainer.jsx'))
+// const ProfileContainer = React.lazy(()=> import('./components/Profile/ProfileContainer.jsx'))
 
 class App extends Component {
   componentDidMount(){
@@ -34,15 +36,8 @@ class App extends Component {
           <HeaderContainer/>
           <NavBar />
           <div className='app-wrapper-content'> 
-            <Route path='/dialogs' render={() =>{ return 
-                <React.Suspense fallback={<div>Loading...</div>}>
-                  <DialogsContainer />
-                </React.Suspense> } } />
-            <Route path='/profile/:userId?' render={() => { return
-                <React.Suspense fallback={<div>Loading...</div>}>
-                    <ProfileContainer />
-                </React.Suspense>
-            }} />
+            <Route path='/dialogs' render={ () => <DialogsContainer />} />
+            <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
             <Route path='/login' render={() => <LoginPage />} />
             <Route path='/users' render={() => <UsersContainer />} />
             <Route path='/news' render={() => <News />} />

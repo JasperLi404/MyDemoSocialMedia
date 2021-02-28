@@ -16,8 +16,9 @@ const AddPostForm = props => {
               placeholder={"Write here..."} />
           </div>
           <div>
-            <button className={classes.button} >
-              <h4>Add Post</h4>
+            <button className={classes.buttonAdd} >
+              
+              ADD POST
           </button>
   
           </div>

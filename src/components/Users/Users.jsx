@@ -9,7 +9,6 @@ let Users = ({currentPage, onPageChanged, totalUsersCount, users,  pageSize, fol
         for(let i = 1; i <= pagesCount; i++){
             pages.push(i);
         }
-        debugger
        return(
         <div>
             <Paginator currentPage={currentPage}
@@ -18,9 +17,8 @@ let Users = ({currentPage, onPageChanged, totalUsersCount, users,  pageSize, fol
                         pageSize={pageSize} />
         
         { 
-            users.map(u => <User user={u} 
-                // key={u.id}
-                                follow={follow} unfollow={unfollow}  />)
+            users.map(u => <User user={u}    key={u.id}
+                  follow={follow} unfollow={unfollow}  />)
         }
     </div>
     )

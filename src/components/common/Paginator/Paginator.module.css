@@ -12,3 +12,21 @@
     align-items: center;
     justify-content: space-around;
 }
+.btnPrevNext{
+
+    font-size: 0.7em; 
+    background-color:  #7c9473;
+    color: #cdd0cb;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 50px;
+    border:0;
+}
+.btnPrevNext:hover{
+    color:  #7c9473;
+    background-color: #cdd0cb;
+    border: 3px solid #7c9473;
+}

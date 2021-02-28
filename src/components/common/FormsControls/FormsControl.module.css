@@ -12,3 +12,46 @@
     color: #d5441c;
     border: 1px solid #d5441c;
 }
+
+.field{
+    margin-top: 15px;
+    height: 25px;
+    width: 200px;
+}
+
+.checkbox{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1em;
+}
+
+.checkbox input{
+    padding-top: 20px;
+   width: 20px;
+   height: 20px;
+}
+.buttonLogIn{
+    background-color:  #7c9473;
+    color: #cdd0cb;
+    margin-left: 25px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    font-size: 1em;
+     outline: none;
+     border: 0;
+     width: 130px;
+     height: 50px;
+     vertical-align: middle;
+     text-decoration: none;
+}
+.buttonLogIn:hover{
+    color:  #7c9473;
+  background-color: #cdd0cb;
+  border: 3px solid #7c9473;
+}
+

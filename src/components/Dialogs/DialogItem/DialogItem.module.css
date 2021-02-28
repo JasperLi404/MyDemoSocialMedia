@@ -10,4 +10,17 @@ a.activeLink{
 }
 .dialog{
   padding: 5px;
+  display: flex;
+  flex-direction: column;
+  
+  /* text-align: center; */
+}
+.dialogText{
+  padding-left: 15px;
+  padding-top: 10px;
+}
+
+.dialog img{
+  height: 100px;
+  width: 70px;
 }

@@ -16,10 +16,10 @@ let User = ({user, follow, unfollow, ...props}) => {
                     <div>
                         {
                             user.followed ? 
-                            <button   className={styles.button} 
+                            <button   className={styles.buttonFolUnfol} 
                             onClick={()=> {unfollow(user.id)}}><h4>UNFOLLOW</h4></button> : 
                             <button
-                            className={styles.button}  onClick={()=> {follow(user.id)}}>
+                            className={styles.buttonFolUnfol}  onClick={()=> {follow(user.id)}}>
                                      <h4>FOLLOW</h4>
                             </button>
                         }

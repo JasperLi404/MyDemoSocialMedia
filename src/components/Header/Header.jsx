@@ -8,16 +8,13 @@ const Header = (props) => {
       <header className={classes.header}>
         <div className={classes.circle}>
           <div className={classes.loginBlock}>
-              { props.isAuth ? 
-              <div>{props.login} <button onClick={props.logout}>LOG OUT</button> </div> 
-              :  <NavLink to={'/login'}>LOGIN</NavLink> }
-
-
-            
+              { props.isAuth ?   <div>{props.login}  </div>  :  <NavLink to={'/login'}>LOG IN</NavLink> }           
           </div>
         </div>
-        
-        <SitebarContainer />
+        <div>
+          {props.isAuth && <button className={classes.buttonLogOut} onClick={props.logout}>LOG OUT</button>}
+        </div>
+        {/* <SitebarContainer /> */}
       </header>
   );
 }

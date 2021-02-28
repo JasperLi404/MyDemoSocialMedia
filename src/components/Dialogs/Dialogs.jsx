@@ -40,9 +40,7 @@ const AddMessageForm = props => {
             
             </div>
             <div>
-            <button className={classes.button}>
-                <h4>Send</h4>
-            </button>
+            <button className={classes.buttonAddMess}> SEND </button>
         </div>
         </form>
     )

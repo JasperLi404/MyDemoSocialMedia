@@ -1,4 +1,4 @@
-.cover{
+.right, .left{
     display:flex;
     flex-direction: row;
     align-items: center;
@@ -9,10 +9,4 @@
     padding-top: 5px;
     width: 75%;
 
-}
-
-
-.img{
-    width: 12%;
-    height: 60px;
 }

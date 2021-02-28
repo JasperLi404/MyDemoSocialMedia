@@ -6,7 +6,8 @@ import React, { useEffect, useState } from 'react';
 import  ProfileDataForm from "./ProfileDataForm/ProfileDataForm.jsx";
 
 
-const ProfileInfo = ({profile, status,isOwner, updateStatus, savePhoto, saveProfile}) => {
+const ProfileInfo = ({profile, status, isOwner, updateStatus, savePhoto, saveProfile}) => {
+    
     let [editMode, setEditMode] = useState(false);
     if(!profile){
             return(<Preloader />)
@@ -25,26 +26,30 @@ const ProfileInfo = ({profile, status,isOwner, updateStatus, savePhoto, saveProf
     }
     return(
         
-        <div>
+        <div className={classes.profileInfo} >
             {/* <div>
                 <img className={classes.imageMainPost} src="https://images.pexels.com/photos/6062504/pexels-photo-6062504.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
              </div> */}
-             <div>
-                 <div>
+             
+                 <div className={classes.profileMainPhoto}>
                     <img className={classes.profilePhoto} 
                                 src={profile.photos.large !== null ? 
                                 profile.photos.large : chatbot }/>
-                    {isOwner && <input type={"file"} onChange={mainPhotoSelected} />}
 
+                    {/* {isOwner && <input type={"file"} onChange={mainPhotoSelected} />} */}
                  </div> 
-                    {editMode ? < ProfileDataForm onSubmit={onSubmit} initialValues={profile} profile={profile}  /> :
+
+
+                    {/* {editMode ? < ProfileDataForm onSubmit={onSubmit} initialValues={profile} profile={profile}  /> :
                     <ProfileData profile={profile} 
                         isOwner={isOwner} 
-                        goToEditMode={() => { setEditMode(true) }} />}
+                        goToEditMode={() => { setEditMode(true) }} />} */}
                     <ProfileStatusWithHooks status={status}
                                  updateStatus={updateStatus}/>
-                 </div> 
-                 {/* {/* <i>My page <br/> Here is all my life...</i></div> */}
+
+                    <div className={classes.Name}>{profile.fullName}</div>
+                 
+                 {/* {/*</div>  <i>My page <br/> Here is all my life...</i></div> */}
 
         </div>
     );

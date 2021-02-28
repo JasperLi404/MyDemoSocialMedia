@@ -8,6 +8,7 @@ import { withAuthRedirect } from '../hoc/withAuthRedirect.js';
 import { compose } from 'redux';
 
 class ProfileContainer extends React.Component   {
+
     componentDidMount(){
         this.refreshProfile();
        }
@@ -17,6 +18,7 @@ class ProfileContainer extends React.Component   {
             userId = this.props.authorisedUserId;
             
         }
+        debugger;
         this.props.getUserProfile(userId);
         this.props.getStatus(userId);
        }
@@ -54,4 +56,5 @@ let mapStateToProps = state => ({
 export default compose(
     withAuthRedirect,
     withRouter,
-    connect(mapStateToProps, {getUserProfile, getStatus, updateStatus, savePhoto, saveProfile}))(ProfileContainer)
+    connect(mapStateToProps, {getUserProfile, getStatus, updateStatus, savePhoto,
+         saveProfile}))(ProfileContainer)

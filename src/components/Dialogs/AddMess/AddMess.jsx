@@ -22,7 +22,7 @@ const AddMess = (props) => {
                 onChange={onMessageChange}></textarea>
             </div>
             <div>
-            <div onClick={addMessage} className={classes.button} >
+            <div onClick={addMessage} className={classes.buttonAddMess} >
                 <h4>Add Message</h4>
             </div>
         </div>

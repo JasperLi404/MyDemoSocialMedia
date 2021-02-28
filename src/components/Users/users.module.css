@@ -55,3 +55,20 @@ img{
 .name{
     width: 55%;
 }
+.buttonFolUnfol{
+    font-size: 1em; 
+    background-color:  #7c9473;
+    color: #cdd0cb;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 100px;
+    border:0;
+}
+.buttonFolUnfol:hover{
+    color:  #7c9473;
+    background-color: #cdd0cb;
+    border: 3px solid #7c9473;
+}

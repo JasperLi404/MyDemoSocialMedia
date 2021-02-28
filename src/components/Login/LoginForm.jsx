@@ -10,7 +10,9 @@ const LoginForm = ({handleSubmit, error,captchaURL }) => {
         <form onSubmit={handleSubmit}>
                 { createField("Email", "email",[required], Input ) }
                 { createField("Password", "password",[required], Input, {type: "password"} ) }
-                { createField(null, "rememberMe",[], Input, {type: "checkbox"}, "Remember Me" ) }
+                <div className={styles.checkbox} >
+                    { createField(null, "rememberMe",[], Input, {type: "checkbox"}, "Remember Me" ) }
+                </div>
                 {captchaURL && <img src={captchaURL} />}
                 {captchaURL && createField("symbols from img", "captcha", [required], Input)}
                 {error && 
@@ -20,7 +22,7 @@ const LoginForm = ({handleSubmit, error,captchaURL }) => {
                 }
                 
                 <div>
-                    <button>Login</button>
+                    <button className={styles.buttonLogIn} >LOG IN</button>
                 </div>
         </form>
     )

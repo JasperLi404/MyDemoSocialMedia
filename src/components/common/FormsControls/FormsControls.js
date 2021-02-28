@@ -25,7 +25,7 @@ export const Input  = (props) => {
 export const createField = (placeholder, name, validator, component, props = {}, text = "" ) => {
     return(
         <div>
-                <Field validate={validator} 
+                <Field className={classes.field} validate={validator} 
             placeholder={placeholder}
             name={name} component={component} {...props} /> {text}
         </div>

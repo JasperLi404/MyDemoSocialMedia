@@ -2,7 +2,35 @@
     width:100%;
     height:350px;
 }
+.profileInfo{
+    display: grid;
+    grid-template-areas: 
+    'mainPhoto name '
+    'mainPhoto status';
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 1vw;
+}
+
+.profileMainPhoto{
+    grid-area: mainPhoto;
+
+}
+
 .profilePhoto{
     width: 128px;
     height: 130px;
+
+}
+.Name{
+    grid-area: name;
+    margin-right: auto;
+    padding-top: 10px;
+}
+.statusInfo{
+    grid-area: status;
+    margin-right: auto;
+    padding-top: 10px;
+
+
 }

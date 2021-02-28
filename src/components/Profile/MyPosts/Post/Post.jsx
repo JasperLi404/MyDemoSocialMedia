@@ -1,9 +1,9 @@
 import classes from './Post.module.css';
-const Post = (props) => {
+const Post = ({url, ...props}) => {
   return (
 
     <div className={classes.item}>
-        <img className={classes.ava} src="https://images.pexels.com/photos/6163100/pexels-photo-6163100.jpeg" alt="" />
+        <img className={classes.ava} src={url} alt="Main Photo" />
       <div>
         <span>{props.message}</span>
       </div>
