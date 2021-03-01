@@ -4,6 +4,7 @@ import chatbot from '../../assets/image/chatbot.png';
 import { NavLink } from 'react-router-dom';
 
 let User = ({user, follow, unfollow, ...props}) => {
+    
     return(
         <div> 
             <div className={styles.cover} key={user.id}>
@@ -14,7 +15,7 @@ let User = ({user, follow, unfollow, ...props}) => {
                         </NavLink>
                     </div>
                     <div>
-                        {
+                        {/* {
                             user.followed ? 
                             <button   className={styles.buttonFolUnfol} 
                             onClick={()=> {unfollow(user.id)}}><h4>UNFOLLOW</h4></button> : 
@@ -22,7 +23,17 @@ let User = ({user, follow, unfollow, ...props}) => {
                             className={styles.buttonFolUnfol}  onClick={()=> {follow(user.id)}}>
                                      <h4>FOLLOW</h4>
                             </button>
-                        }
+                        } */}
+
+                        <button   className={styles.buttonFolUnfol} 
+                            onClick={(i)=> {
+                                let val = i.target.innerHTML;
+                                console.log(val);
+                                val == "UNFOLLOW" ? i.target.innerHTML = "FOLLOW" : 
+                                i.target.innerHTML = "UNFOLLOW"
+                            }}>FOLLOW</button>
+                            
+                            
                     </div>
                 </span>
                 <span className={styles.name_cover}>

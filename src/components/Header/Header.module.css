@@ -8,7 +8,8 @@
   }
   .circle{
     border: 3px solid #7c9473;
-    width: 85px;
+    width: 130px;
+    height: 50px;
     display:flex;
     justify-content: center;
     align-items: center;

@@ -16,6 +16,7 @@ import UsersContainer from './components/Users/UsersContainer';
 import { initializeApp } from './redux/app-reducer';
 import DialogsContainer from './components/Dialogs/DialogsContainer.jsx';
 import ProfileContainer from './components/Profile/ProfileContainer.jsx';
+import NewsContainer from './components/News/NewsContainer';
 
 // const DialogsContainer = React.lazy(()=> import('./components/Dialogs/DialogsContainer.jsx'))
 // const ProfileContainer = React.lazy(()=> import('./components/Profile/ProfileContainer.jsx'))
@@ -40,7 +41,7 @@ class App extends Component {
             <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
             <Route path='/login' render={() => <LoginPage />} />
             <Route path='/users' render={() => <UsersContainer />} />
-            <Route path='/news' render={() => <News />} />
+            <Route path='/news' render={() => <NewsContainer /> } />
             <Route path='/music' render={() => <Music />} />
             <Route path='/settings' render={() => <Settings />} />
           </div>

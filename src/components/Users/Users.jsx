@@ -1,8 +1,10 @@
 import React from 'react';
 import Paginator from '../common/Paginator/Paginator';
+import Preloader from '../common/Preloader/Preloader';
 import User from './User';
 
 let Users = ({currentPage, onPageChanged, totalUsersCount, users,  pageSize, follow, unfollow, ...props}) => {
+   
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize) ;
         let pages = [];
 
